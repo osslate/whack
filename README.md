@@ -11,7 +11,7 @@ whack allows you to cap text to a specific width, similar to `fmt -w <len>`.
 
 ### `whack(options)`
 
-Create a Transform stream, where `options` can contain:
+Create a Transform stream, where `options` is an object that can contain:
 
 * `limit` - limit to split text. Defaults to `80`.
 * `separator` - A string to insert when separating text. Defaults to `\n`.

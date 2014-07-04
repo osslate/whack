@@ -11,12 +11,12 @@ var whack = function (options) {
 
     var stream = new Transform();
     var buffer = "";
-
-    stream.on("end", function() {
-        this.push(buffer);
-    });
+    var pushedRemainder = false;
 
     stream._transform = function (chunk, encoding, done) {
+        if (pushedRemainder)
+            return done();
+
         chunk = chunk.toString();
 
         if (stripNewline)
@@ -56,6 +56,12 @@ var whack = function (options) {
         }
 
         done();
+    }
+
+    stream.end = function (chunk, encoding, done) {
+        this.push(buffer);
+        pushedRemainder = true;
+        Transform.prototype.end.call(this, chunk, encoding, done);
     }
 
     return stream;
