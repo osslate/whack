@@ -1,6 +1,6 @@
 {
   "name": "whack",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "text formatter stream",
   "main": "index.js",
   "scripts": {
