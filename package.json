@@ -1,0 +1,27 @@
+{
+  "name": "whack",
+  "version": "0.0.0",
+  "description": "text formatter stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/expr/whack.git"
+  },
+  "keywords": [
+    "fmt",
+    "text",
+    "formatter"
+  ],
+  "author": "Fionn Kelleher <me@fionn.co>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/expr/whack/issues"
+  },
+  "homepage": "https://github.com/expr/whack",
+  "dependencies": {
+    "readable-stream": "^1.0.27-1"
+  }
+}
